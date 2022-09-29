@@ -63,7 +63,7 @@ public class BankWebsite {
    public void location()
    {
      String location =a.getlocation();
-     System.out.println(a.getAccountNumber()+"-"+location);
+     System.out.println(a.getAccountNumber()+" - "+location);
    }
  
 

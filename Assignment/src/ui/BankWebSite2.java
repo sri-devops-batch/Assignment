@@ -173,7 +173,7 @@ public class BankWebSite2 {
 		System.out.println(" Enter Amount to be withdrawl :-  ");
 		int withdrawl  = sc.nextInt();
 		
-		System.out.println(" Enter the location :-  ");
+		System.out.println(" Enter account in location :-  ");
 		int location  = sc.nextInt();
 		
 		
