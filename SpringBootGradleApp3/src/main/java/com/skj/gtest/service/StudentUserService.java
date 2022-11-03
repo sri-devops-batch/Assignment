@@ -10,8 +10,12 @@ public interface StudentUserService {
        public List<Student> getAllStudentsByStream() throws Exception;
        public List<Student> getAllStudentsByMarks(int r1,int r2) throws Exception;
        public Student getStudentByName(String Name) throws Exception;
-       public Student getStudentByRollNumber(int rollNum) throws Exception;
        
+       public String insertStudent(Student student)throws Exception;
+     public Student getStudentByStreamAndLocation(String searchname, String location) throws Exception;
+	
+	 public List<Student> getStudentsBetweenIds(int s1, int s2)throws Exception;
+	
        
 
 

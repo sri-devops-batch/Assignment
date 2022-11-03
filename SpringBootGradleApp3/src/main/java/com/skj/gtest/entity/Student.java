@@ -1,63 +1,40 @@
 package com.skj.gtest.entity;
-import org.springframework.stereotype.Component;
 
-@Component
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
 public class Student {
 	
-	private String StudentName;
-	private int RollNumber;
-	private int Marks;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int studentId;
+	
+	private String studentName;
 	private String Stream;
-	
-	public Student() {
+	private String location;
+	private int Marks;
+	public Student(String studentName, String stream, String location, int marks) {
 		super();
-	}
-
-	public Student(String studentName, int rollNumber, int marks, String stream) {
-		super();
-		StudentName = studentName;
-		RollNumber = rollNumber;
-		Marks = marks;
+		this.studentName = studentName;
 		Stream = stream;
-	}
-
-	public String getStudentName() {
-		return StudentName;
-	}
-
-	public void setStudentName(String studentName) {
-		StudentName = studentName;
-	}
-
-	public int getRollNumber() {
-		return RollNumber;
-	}
-
-	public void setRollNumber(int rollNumber) {
-		RollNumber = rollNumber;
-	}
-
-	public int getMarks() {
-		return Marks;
-	}
-
-	public void setMarks(int marks) {
+		this.location = location;
 		Marks = marks;
 	}
-
-	public String getStream() {
-		return Stream;
-	}
-
-	public void setStream(String stream) {
-		Stream = stream;
-	}
-
-	@Override
-	public String toString() {
-		return "Student [StudentName=" + StudentName + ", RollNumber=" + RollNumber + ", Marks=" + Marks + ", Stream="
-				+ Stream + "]";
+	
+	
 	}
 	
-
-}
+	
+	
+	
+	
